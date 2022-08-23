@@ -7,12 +7,12 @@ body {
     display: flex;
     flex-direction: column;
     border: 0px solid #000;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    font-family: 'DynaPuff', cursive;
 }
 
 header .title {
-    font-family: 'DynaPuff', cursive;
     background-color: #8EA076;
     padding: 1.4rem 1rem;
 }
@@ -22,19 +22,17 @@ header h1 {
 }
 
 header p {
-    margin:0;
-    margin-left: 20px;
+    margin: 0;
 }
 
-nav {
+nav, nav a {
     background-color: #445F3B;
+    color: #E0EFEA;
 }
 
 nav ul {
     display: flex;
-    margin:0;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    margin: 0;
 }
 
 nav ul li {
@@ -42,17 +40,61 @@ nav ul li {
     list-style-type: none;
 }
 
-main {
+nav ul a {
+    text-decoration: none;
+}
+
+.icon-menu {
+    display: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.icon-menu i {
+    padding: 8px;
+}
+
+.main {
     background-color: #E0EFEA;
     display: flex;
+    /* flex-wrap: wrap; */
 }
 
 .content {
-    flex-basis: 70%;
+    flex-basis: 75%;
+    margin: 1rem;
+}
+
+article p {
+    text-align: justify;
+    font-family: serif;
 }
 
 aside {
-    flex-basis: 30%;
+    font-family: 'DynaPuff', cursive;
+    flex-basis: 25%;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 1.5rem;
+    height: fit-content;
+    border-left: 1px groove #445F3B;
+}
+
+aside img {
+    border-radius: 50%;
+    margin-bottom: .2rem;
+}
+
+aside .work {
+    font-size: x-small;
+}
+
+aside .website {
+    margin-top: .2rem;
+}
+
+aside .website a {
+    color: #445F3B;
 }
 
 footer {
@@ -64,12 +106,71 @@ footer {
 footer a {
     display: inline-block;
     text-decoration: none;
-    color: #E0EFEA;
-    font-weight: bold;
+    color: #8EA076;
     transition: all .2s;
+    font-weight: bold;
 }
 
 footer a:hover {
-    transform: scale(120%) rotate(-10deg);;
-    /* transform: rotate(-10deg); */
+    transform: scale(120%) rotate(-10deg) translate(10px);
+}
+
+.show-menu {
+    display: block !important;
+}
+
+.quote {
+    margin: 1rem auto;
+    font-style: italic;
+}
+
+.quote .quote-tag {
+    font-size: x-small;
+    text-align: start;
+    padding-left: 1.5rem;
+    margin: .5rem 0 0;
+}
+
+.teacher {
+    background-color: #669374;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.teacher .title {
+    margin: 0 0 .1rem;
+}
+
+.teacher .desc {
+
+}
+
+@media screen and (max-width: 800px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .content {
+        border: 0;
+    }
+
+    aside {
+        margin: auto;
+        width: 25%;
+        border: 0;
+        border-top: 1px groove #445F3B;
+        order: 3;
+    }
+
+    .icon-menu {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: none;
+    }
 }
