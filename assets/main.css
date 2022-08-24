@@ -12,9 +12,19 @@ body {
     font-family: 'DynaPuff', cursive;
 }
 
-header .title {
+header .header {
     background-color: #8EA076;
-    padding: 1.4rem 1rem;
+    display: flex;
+    align-items: center;    
+}
+
+header .header img {
+    margin: .5rem 2rem 0 auto;
+    width: 100px;
+}
+
+header .title {
+    margin: 0 1rem;
 }
 
 header h1 {
@@ -55,7 +65,7 @@ nav ul a {
 }
 
 .main {
-    background-color: #E0EFEA;
+    background-color: #b3cec6;
     display: flex;
     /* flex-wrap: wrap; */
 }
@@ -142,7 +152,103 @@ footer a:hover {
 }
 
 .teacher .desc {
+    margin: 0 0 1.5rem;
+}
 
+.teacher .items {
+    display: flex;
+    margin : 0 1rem 1rem;
+    flex-wrap: wrap;
+}
+
+.teacher .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0.5rem 0;
+}
+
+.teacher .card img {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.teacher .info {
+    padding: 1rem;
+}
+
+.teacher .info .job {
+    font-style: italic;
+}
+
+.teacher .info .name {
+    font-weight: 500;
+    margin: .5rem 0 0;
+}
+
+.newsletter {
+    background-color: #445F3B;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.newsletter .title {
+    margin: 0 0 .1rem;
+}
+
+.newsletter .desc {
+    margin: 0 0 1.5rem;
+}
+
+.newsletter form #email {
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: #E0EFEA;
+}
+
+.newsletter form button {
+    padding: .6rem;
+    border-radius: 5px;
+    background-color: #aa4901;
+    border: 0;
+    color: #E0EFEA;
+}
+
+
+.contact {
+    background-color: #8EA076;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.contact .title {
+    margin-top: 0;
+}
+
+.contact .items {
+    display: flex;
+}
+
+.contact .socmed {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .icon {
+    font-size: 32px;
+    margin: .5rem;
+    color: #564734;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #445F3B
 }
 
 @media screen and (max-width: 800px) {
@@ -159,7 +265,6 @@ footer a:hover {
         width: 25%;
         border: 0;
         border-top: 1px groove #445F3B;
-        order: 3;
     }
 
     .icon-menu {

@@ -5,6 +5,7 @@ function dropDownMenu(){
     })
 }
 
+//dropdown menu
 const btnIconMenu = document.querySelector('.icon-menu')
 btnIconMenu.addEventListener('click', dropDownMenu)
 
@@ -16,5 +17,6 @@ const quotes = [
     "Make it work, make it right, make it fast",
 ]
 
+//random quote of the day
 const quoteEl = document.querySelector('.quote q')
 quoteEl.innerText = quotes[Math.floor(Math.random() * quotes.length)]
