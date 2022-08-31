@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: #90B77D;
+}
+
+main {
+    width: 100vw;
+}
+
+section {
+    background-color: #42855B;
+    padding: 1rem;
+    margin: .5rem 0;
+}
+
+.title {
+    background-color: #483838;
+    padding: 1rem;
+    color: #D2D79F;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .3rem;
+    width: fit-content;
+}
+
+.input-group input {
+    margin-top: .2rem;
+    padding: .3rem;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #CFE8A9;
+    border: 0;
+    padding: .5rem;
+    border-radius: 4px;
+    margin-top: .5rem;
+}
+
+.search {
+    text-align: center;
+}
+
+input[name="search"] {
+    padding: .3rem;
+    border-radius: 4px;
+}
+
+.rak {
+    display: flex;
+    background-color: #90B77D;
+}
+
+.rak section {
+    flex-grow: 1;
+    margin: .5rem;
+    height: fit-content;
+}
+
+#list-unread>div {
+    background-color: #90B77D;
+    margin-bottom: .2rem;
+    display: flex;
+    padding: .5rem;
+}
+
+#list-unread>div>div h2 {
+    margin: 0;
+}
+
+#list-unread>div>div p {
+    margin: 0;
+}
+
+#list-unread>div>div p:before {
+    content: 'year: ';
+}
+
+#list-unread>div>div div:before {
+    content: 'author: ';
+}
+
+#list-unread>div>div {
+    flex-grow: 1;
+}
+
+#list-isread>div {
+    background-color: #90B77D;
+    margin-bottom: .2rem;
+    display: flex;
+    padding: .5rem;
+}
+
+#list-isread>div>div h2 {
+    margin: 0;
+}
+
+#list-isread>div>div p {
+    margin: 0;
+}
+
+#list-isread>div>div p:before {
+    content: 'year: ';
+}
+
+#list-isread>div>div div:before {
+    content: 'author: ';
+}
+
+#list-isread>div>div {
+    flex-grow: 1;
+}
+
+.check-button {
+    background-color: #CFE8A9;
+    border: 0;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    transition: all .1s;
+}
+
+.check-button:hover,
+input[type="submit"]:hover {
+    outline: 3px solid #707e5d;
+    color: #707e5d;
+}
+
+.trash-button {
+    background-color: #E64848;
+    border: 0;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    transition: all .1s;
+}
+
+.trash-button:hover {
+    outline: 3px solid #C21010;
+    color: #fff;
+}
+
+.undo-button {
+    background-color: #CFE8A9;
+    border: 0;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    transition: all .1s;
+}
+
+.undo-button:hover {
+    outline: 3px solid #707e5d;
+    color: #707e5d;
+}

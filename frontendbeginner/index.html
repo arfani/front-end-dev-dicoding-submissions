@@ -7,30 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="assets/css/style.css">
 
 <body>
     <main>
+        <h1 class="title">Aplikasi Rak Penyimpanan Buku</h1>
         <section class="form">
             <h2>Input data buku</h2>
             <form action="#">
-                <input type="text" name="judul" placeholder="Judul">
-                <input type="text" name="penulis" placeholder="Penulis">
-                <input type="number" name="tahun" maxlength="4" minlength="4" >
+                <div class="input-group">
+                    <label for="judul">Judul Buku</label>
+                    <input type="text" name="judul" id="judul" placeholder="Judul">
+                </div>
+                <div class="input-group">
+                    <label for="penulis">Author</label>
+                    <input type="text" name="penulis" id="penulis" placeholder="Penulis">
+                </div>
+                <div class="input-group">
+                    <label for="tahun">Tahun</label>
+                    <input type="number" name="tahun" id="tahun" max="2022" placeholder="Tahun">
+                </div>
                 <div>
-                    <input type="checkbox" name="isRead"><label>Sudah dibaca</label>
+                    <input type="checkbox" name="isComplete"><label>Sudah dibaca</label>
                 </div>
                 <input type="submit" value="Simpan">
             </form>
         </section>
-        <section class="rakbelumbaca">
-            <h2>Rak buku belum terbaca</h2>
-            <div id="list-unread">
-            </div>
+        <section class="search">
+            <input type="text" name="search" placeholder="Ketik disini untuk mencari">
         </section>
-        <section class="raksudahbaca">
-            <h2>Rak buku sudah terbaca</h2>
-            <div id="list-isread"></div>
+        <section class="rak">
+            <section class="rakbelumbaca">
+                <h2>Rak buku belum terbaca</h2>
+                <div id="list-unread">
+                </div>
+            </section>
+            <section class="raksudahbaca">
+                <h2>Rak buku sudah terbaca</h2>
+                <div id="list-isread"></div>
+            </section>
         </section>
     </main>
     <script src="assets/js/script.js"></script>
