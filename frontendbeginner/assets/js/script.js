@@ -1,6 +1,7 @@
 let dataBuku = [];
 const RENDER_EVENT = 'render-list';
 const STORAGE_KEY = 'DATA_BUKU';
+const btnSearch = document.querySelector('[name="search"]');
 
 function generateDataBuku(id, title, author, year, isComplete) {
     return {
@@ -40,13 +41,14 @@ function loadDataFromStorage() {
 }
 
 function searchBuku(title) {
-    const serializedData = localStorage.getItem(STORAGE_KEY);
-    let data = JSON.parse(serializedData);
-
-    if (data !== null) {
-        for (const item of data) {
-            if (item.title.includes(title))
-                dataBuku.push(item);
+    const items = document.querySelectorAll('.book-title')
+    for (let i=0; i < items.length; i++) {
+        console.log(items[i]);
+        textItem = items[i].textContent || items[i].innerText
+        if(textItem.toUpperCase().indexOf(title.toUpperCase()) > -1){
+            items[i].parentElement.parentElement.style.display = 'flex'
+        }else{
+            items[i].parentElement.parentElement.style.display = 'none'
         }
     }
 }
@@ -130,6 +132,7 @@ function BukuElement(bukuObject) {
     const { id, title, author, year, isComplete } = bukuObject;
 
     const textTitle = document.createElement('h2');
+    textTitle.classList.add('book-title')
     textTitle.innerText = title;
 
     const textTimestamp = document.createElement('p');
@@ -212,18 +215,13 @@ document.addEventListener(RENDER_EVENT, function () {
             unreadBook.append(listBuku);
         }
     }
+    if (btnSearch.value !== '') searchBuku(btnSearch.value)
 });
 
-const btnSearch = document.querySelector('[name="search"]');
 btnSearch.addEventListener('keyup', function (e) {
-    dataBuku = [];
-
     if (this.value) {
         searchBuku(this.value);
     } else {
-        if (isStorageExist()) {
-            loadDataFromStorage();
-        }
+        document.dispatchEvent(new Event(RENDER_EVENT));
     }
-    document.dispatchEvent(new Event(RENDER_EVENT));
 })
